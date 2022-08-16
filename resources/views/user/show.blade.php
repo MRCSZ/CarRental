@@ -4,7 +4,6 @@
 
 @section('sidebar')
     @parent
-    <div>Lista użytkowników: <a href="{{ route('get.users.list') }}">Link</a></div>
 @endsection
 
 @section('content')
@@ -17,8 +16,8 @@
                 <li>Nazwisko: {{ $user['lastName'] }}</li>
                 <li>Miasto: {{ $user['city'] }}</li>
                 <li>Wiek: {{ $user['age'] }}</li>
+                <li>Marka: {{ $user['brand'] }}</li>
             </ul>
-
             <a href="{{ route('get.users.list') }}" class="btn btn-light">Lista użytkowników</a>
         </div>
     </div>

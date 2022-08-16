@@ -1,17 +1,6 @@
 @extends('layout.main')
 
 @section('content')
-    <main>
-        <div class="container-fluid">
-            @if ($formMsg == 0)
-                @include('shared.flashMsg_resultError')
-                @yield('content')
-            @else
-                @include('shared.flashMsg_resultAccept')
-                @yield('content')
-            @endif
-        </div>
-    </main>
 
     <div class="card">
         <div class="card-header"><i class="fas fa-table mr-1"></i>Lista użytkowników</div>

@@ -21,14 +21,7 @@ class UserController extends Controller
             ];
         }
 
-        $faker = Factory::create();
-        $formResult = $faker->numberBetween(0, 1);
-
-        $request->session()->flash('requestResult', $formResult);
-        $formMsg = $request->session()->get('requestResult');
-
         return view('user.list', [
-            'formMsg' => ((string) $formMsg),
             'users' => $users
         ]);
 
@@ -41,11 +34,8 @@ class UserController extends Controller
     public function show(Request $request, int $userId)
     {
         $prevAction = $request->session()->get('prevAction');
-        dump($prevAction);
 
         $request->session()->put('test_tt', false);
-
-        dump($request->session()->get('flashTestParam'));
 
         $faker = Factory::create();
         $user = [
@@ -54,8 +44,8 @@ class UserController extends Controller
             'firstName' => $faker->firstName,
             'lastName' => $faker->lastName,
             'city' => $faker->city,
-            'age' => $faker->numberBetween(12, 25),
-            'html' => '<script>alert("XSS")</script>'
+            'age' => $faker->numberBetween(18, 70),
+            'brand' => $faker->randomElement(['Volkswagen', 'Opel', 'Audi', 'BMW', 'Kia', 'Mercedes', 'Lexus', 'Toyota']),
         ];
 
         return view('user.show', [

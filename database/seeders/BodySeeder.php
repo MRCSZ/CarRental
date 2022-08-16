@@ -22,8 +22,8 @@ class BodySeeder extends Seeder
             ['id' => 2, 'name' => 'sedan', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
             ['id' => 3, 'name' => 'SUV', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
             ['id' => 4, 'name' => 'coupe', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
-            ['id' => 5, 'name' => 'sport_car', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
-            ['id' => 6, 'name' => 'station_wagon', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['id' => 5, 'name' => 'samochód sportowy', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['id' => 6, 'name' => 'kombi', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
         ]);
 
     }

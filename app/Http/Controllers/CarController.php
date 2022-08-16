@@ -49,10 +49,10 @@ class CarController extends Controller
 
     public function show($carId): View
     {
-        $cars = DB::table('cars')->find($carId);
+        $car = DB::table('cars')->find($carId);
 
         return view('cars.show', [
-            'cars' => $cars
+            'car' => $car
         ]);
     }
 }
